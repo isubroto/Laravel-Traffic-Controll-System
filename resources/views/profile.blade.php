@@ -20,7 +20,7 @@
           <div class="card card-profile">
             <div class="card-avatar">
               <a href="#pablo">
-                <img class="img" src="{{Auth::user()->Gender==='M' ? '../assets/img/faces/face-icon-male.png' : '../assets/img/faces/face-icon-female.jpg'}}">
+                <img class="img" src="{{Auth::user()->Gender==='M' ? asset('assets/img/faces/face-icon-male.png') : asset('assets/img/faces/face-icon-female.png')}}">
               </a>
             </div>
             <div class="card-body">

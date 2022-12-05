@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\TaxController;
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,4 +65,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/Car/Edit/{id}',[CarController::class,'EditRegisteredCar'])->name('EditRegisteredCar');
     Route::post('/Car/Edit',[CarController::class,'EditCardetails'])->name('EditCardetails');
     Route::get('/Car/Delete/{id}',[CarController::class,'DeleteCardetails'])->name('DeleteCardetails');
+    //Dashboard
+    Route::post('/Dashboard/update/',[DashboardController::class,'updatestatus'])->name('Dashboard.update');
+    Route::post('/Dashboard/status',[DashboardController::class,'getStatus'])->name('Dashboard.status');
+    Route::post('/Dashboard/Change',[DashboardController::class,'SetStatus'])->name('Dashboard.changes');
 });

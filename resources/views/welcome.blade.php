@@ -31,7 +31,7 @@
       <div class="sidebar-wrapper">
         <div class="user">
           <div class="photo">
-            <img src="{{Auth::user()->Gender==='M' ? asset('assets/img/faces/face-icon-male.png') : asset('assets/img/faces/face-icon-female.jpg')}}" />
+            <img src="{{Auth::user()->Gender==='M' ? asset('assets/img/faces/face-icon-male.png') : asset('assets/img/faces/face-icon-female.png')}}" />
           </div>
           <div class="user-info">
             <a data-toggle="collapse" href="#collapseExample" class="username">
@@ -182,8 +182,8 @@
   <script src="{{asset('assets/js/material-dashboard.js?v=2.1.2')}}" type="text/javascript"></script>
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="{{asset('assets/demo/demo.js')}}"></script>
-  @yield("script")
   <script>
+    var traffic_info = {'backward':0,'upward':0,'downward':0,'forward':0,'backwardCount':false,'forwardCount':true,'downwardCount':true,'upwardCount':true};
     $(document).ready(function() {
       $().ready(function() {
         $sidebar = $('.sidebar');
@@ -353,6 +353,17 @@
         });
       });
     });
+    $(function(){setInterval(function(){ 
+       $.post("/Dashboard/update",{'_token': '{{csrf_token()}}','value':traffic_info},function(data){
+    traffic_info =JSON.parse(data);
+        })
+}, 1000);
+    })
+// $(function(){
+//   $.post("/Dashboard/update/",{'_token': '{{csrf_token()}}','value':traffic_info},function(data){
+//     console.log(data);
+//          })
+// })
   </script>
   <script>
     $(document).ready(function() {
@@ -363,6 +374,7 @@
 
     });
   </script>
+  @yield("script")
 </body>
 
 </html>
