@@ -23,9 +23,11 @@ after successfull login redirect to the dashboard pages.
 ### Dashboard
 user can see traffic status and controll traffic signals.
 they can open or close the signals to control traffic.
+
 ![dashbord](imgss/Dashbord.jpg)
 ### Car Registration
 - user can view registered car details.
+
   ![car view](imgss/car%20view.jpg)
 - user can add a car new for registration by click add car button and input are 
   - Car License Number
@@ -37,12 +39,15 @@ they can open or close the signals to control traffic.
 
   ![car add](imgss/car%20view.jpg)
 - user can update car details by click edit button. They rederict the car update form.
+
   ![car add](imgss/carupdate.jpg)
 - user can delete car details by click delete car button.
+
   ![car delete](imgss/cardelete.jpg)
 
 ### Tax Collection
 - user can show paid tax information
+
   ![taxshow](imgss/taxview.jpg)
 - user can pay tax and the inputs are
   - Choose License Number (that information form registered car)
@@ -54,6 +59,7 @@ they can open or close the signals to control traffic.
 
 ### Accident Record
 - user can view accident record of registered cars.
+
   ![Accident view](imgss/Accidentview.jpg)
 - user can add new accident record for registered car by click add car button and input are 
   - Choose License Number(that information form registered car)
@@ -65,11 +71,14 @@ they can open or close the signals to control traffic.
 
   ![car add](imgss/accidentadd.jpg)
 - user can update Accident details by click edit button. They rederict the Accident update form.
+
   ![car add](imgss/accidentupdate.jpg)
 - user can delete Accident details by click delete car button.
+
   ![car delete](imgss/accidentdelete.jpg)
 ### logout
 you can log out form system by clicking logout button.
+
 ![logout](imgss/logout.jpg)
 
 all process(without login and logout) is shown to this system for a valid user. To access the system you need to login first.
